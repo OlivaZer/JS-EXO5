@@ -8,15 +8,28 @@
 </head>
 <body>
   <div class="container">
-    <h1>Conversion Euros en Francs</h1>
+    <h1>Valeur en Euros</h1>
     <!-- Zone de saisie pour l'utilisateur -->
-    <label for="eurosInput">Montant en Euros:</label>
-    <input type="text" id="eurosInput" placeholder="Saisir une valeur en Euros">
+    <label for="eurosInput">Entrez le montant en Euros:</label>
+    <input type="text" id="eurosInput" placeholder="Valeur en Euros">
     
-    
+    <!-- Div pour afficher le résultat en francs -->
+    <div id="result"></div>
   </div>
-  <script>
 
+  <!-----------------------------------------Script Js----------------------------------------->
+  <script >
+
+    // Récupérer l'élément d'entrée où l'utilisateur saisit le montant en euros 
+    const eurosInput = document.getElementById('eurosInput');
+    // Récupérer l'élément div où nous afficherons le résultat de la conversion en francs
+    const resultDiv = document.getElementById('result');
+
+    
+    
+    
+
+    
   </script>
   
 </body>
