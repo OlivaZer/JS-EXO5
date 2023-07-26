@@ -25,11 +25,27 @@
     // Récupérer l'élément div où nous afficherons le résultat de la conversion en francs
     const resultDiv = document.getElementById('result');
 
+    // Ajouter un écouteur d'événement pour le champ de saisie
+    eurosInput.addEventListener('input', updateConversion);
     
-    
-    
+    //****************************************************//
 
-    
+    // Fonction qui effectue la conversion en francs
+    function updateConversion() {
+        // Récupérer la valeur saisie par l'utilisateur en tant que nombre flottant
+        const inputValue = parseFloat(eurosInput.value);
+
+        // Vérifier si la saisie est un nombre ou si la valeur est vide
+        if (!isNaN(inputValue) && eurosInput.value !== '') {
+            //Conversion en francs et l'afficher avec deux décimales
+            const francsValue = (inputValue * 6.55957).toFixed(2);
+            resultDiv.textContent = `${inputValue} Euros équivaut à ${francsValue} Francs.`;
+        } else {
+            // Si la valeur est vide ou non numérique après avoir effacé sa première valeur alors on affiche 'saissisez une autre valeur '
+            resultDiv.textContent = 'Saisissez une autre valeur';
+        }
+    }
+ 
   </script>
   
 </body>
